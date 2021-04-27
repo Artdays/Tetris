@@ -1,19 +1,27 @@
 class Peca {  
+	x;
+	y;
+	cor;
+	forma;
+	ctx;
+	idTipo;
+
+
   constructor(ctx) {
     this.ctx = ctx;
-    this.color = 'blue';
-    this.shape = [
-      [2, 0, 0], 
-      [2, 2, 2], 
-      [0, 0, 0]
-    ];
-    
-    // Posição inicial no painel.
-    this.x = 3;
+    this.spawn();
+  }
+  
+  spawn() {
+    this.idTipo = this.randomizePeca(CORES.length - 1);
+    this.shape = FORMAS[this.idTipo];
+    this.color = CORES[this.idTipo];
+    this.x = 0;
     this.y = 0;
   }
   
   desenho() {
+	  
 	  //define a cor de preenchimento
   this.ctx.fillStyle = this.color;
   this.shape.forEach((row, y) => {
@@ -30,9 +38,17 @@ class Peca {
 }
 
 mover(p) {
-  this.x = p.x;
-  this.y = p.y;
+   this.x = p.x;
+    this.y = p.y;
+    this.shape = p.shape;
 }
 
+setPosicaoInicial() {
+    this.x = this.typeId === 4 ? 4 : 3;
+  }
+
+randomizePeca(noDeTipos) {
+    return Math.floor(Math.random() * noDeTipos + 1);
+  }
 
 }
