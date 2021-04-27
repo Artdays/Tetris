@@ -16,6 +16,7 @@ const KEY = {
 }
 Object.freeze(KEY);
 
+<<<<<<< HEAD
 
 
 const CORES = [  
@@ -92,3 +93,12 @@ const PONTOS = {
   DESPENCA: 2,
 }
 Object.freeze(PONTOS);
+=======
+//movimeto das peças
+const movimento = {
+	[KEY.SPACE]: p => ({ ...p, y: p.y + 1 }),
+  [KEY.LEFT]:  p => ({ ...p, x: p.x - 1 }),
+  [KEY.RIGHT]: p => ({ ...p, x: p.x + 1 }),
+  [KEY.DOWN]:    p => ({ ...p, y: p.y + 1 })
+};
+>>>>>>> a8f12df197e5c9b803ba34e2fa6cae4424846689
