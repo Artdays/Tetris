@@ -45,6 +45,7 @@ mover(p) {
 
 setPosicaoInicial() {
     this.x = this.typeId === 4 ? 4 : 3;
+	
   }
 
 randomizePeca(noDeTipos) {

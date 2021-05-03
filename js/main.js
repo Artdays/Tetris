@@ -50,6 +50,7 @@ ctxNext.canvas.height = 4 * TAM_BLOCO;
 ctxNext.scale(TAM_BLOCO, TAM_BLOCO);
 }
 
+//REMOVE DO arquivo de constantes e migar para main, sem ser contante
 movimento = {
   [KEY.LEFT]: p => ({ ...p, x: p.x - 1 }),
   [KEY.RIGHT]: p => ({ ...p, x: p.x + 1 }),
