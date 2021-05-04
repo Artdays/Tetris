@@ -16,7 +16,6 @@ const KEY = {
 }
 Object.freeze(KEY);
 
-<<<<<<< HEAD
 
 
 const CORES = [  
